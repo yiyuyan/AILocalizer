@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<component>
+  <configuration default="false" factoryName="Application" name="forge Client" singleton="false" type="Application">
+    <option name="MAIN_CLASS_NAME" value="net.minecraftforge.bootstrap.ForgeBootstrap"/>
+    <option name="VM_PARAMETERS" value="-Dnet.minecraftforge.gradle.GradleStart.srg.srg-mcp=D:\CommonMod\AILocalizer\forge\build\createSrgToMcp\output.srg -Dmixin.env.remapRefMap=true -Dmixin.env.refMapRemappingFile=D:\CommonMod\AILocalizer\forge\build\createSrgToMcp\output.srg -Dforge.enableGameTest=true -Djava.net.preferIPv6Addresses=system -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump"/>
+    <option name="PROGRAM_PARAMETERS" value="--launchTarget forge_userdev_client --version MOD_DEV --assetIndex 17 --assetsDir F:\.gradle\caches\forge_gradle\assets --gameDir . --mixin.config ailocalizer.mixins.json --mixin.config ailocalizer.forge.mixins.json"/>
+    <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$\forge\runs\client"/>
+    <module name="AILocalizer.forge.main"/>
+    <envs>
+      <env name="MOD_CLASSES" value="modClientRun%%$PROJECT_DIR$\forge\build\sourcesSets\main"/>
+      <env name="MCP_MAPPINGS" value="official_1.21"/>
+    </envs>
+    <method v="2">
+      <option enabled="true" name="Make"/>
+      <option enabled="true" externalProjectPath="$PROJECT_DIR$" name="Gradle.BeforeRunTask" tasks=":forge:prepareClientCompile"/>
+    </method>
+  </configuration>
+</component>
