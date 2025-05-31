@@ -6,8 +6,7 @@
   "compatibilityLevel": "JAVA_18",
   "mixins": [],
   "client": [
-    "ReloadableResourceManagerMixin",
-    "TitleScreenMixin"
+    "ReloadableResourceManagerMixin"
   ],
   "server": [],
   "injectors": {

@@ -25,6 +25,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import java.io.File;
 import java.io.InputStream;
 import java.nio.file.Files;
+import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.Executor;
@@ -34,10 +35,6 @@ public class ReloadableResourceManagerMixin {
     @Inject(method = "createReload",at = @At("TAIL"))
     public void init(Executor pBackgroundExecutor, Executor pGameExecutor, CompletableFuture<Unit> pWaitingFor, List<PackResources> pResourcePacks, CallbackInfoReturnable<ReloadInstance> cir) throws Exception {
         try {
-            if(CommonClass.loaded<1){
-                CommonClass.loaded++;
-                return;
-            }
             if(CommonClass.r) return;
             CommonClass.r = true;
             Minecraft MC = Minecraft.getInstance();
@@ -57,11 +54,17 @@ public class ReloadableResourceManagerMixin {
                 }
             }
             File tmp = new File(RandomStringUtils.randomNumeric(12));
+
+            SimpleDateFormat formatter = new SimpleDateFormat("MM-dd 'at' HH:mm:ss z");
             for (String string : namespaces.keySet()) {
                 boolean en = false,zh = false;
                 for (ResourceLocation location : namespaces.get(string)) {
-                    if(location.getPath().endsWith("en_us.json")) en = true;
-                    if(location.getPath().endsWith("zh_cn.json")) zh = true;
+                    if(location.getPath().endsWith("en_us.json")&& resourceManager.getResource(location).isPresent()){
+                        en = true;
+                    }
+                    if(location.getPath().endsWith("zh_cn.json") && resourceManager.getResource(location).isPresent()){
+                        zh = true;
+                    }
                 }
                 if(en && !zh && !string.equalsIgnoreCase("minecraft") && !string.equalsIgnoreCase("c") && !string.equalsIgnoreCase("fabric-convention-tags-v2")){
                     File assets = new File(tmp.getPath()+"/assets/"+string+"/lang");
@@ -72,13 +75,14 @@ public class ReloadableResourceManagerMixin {
                     tmp.mkdir();
                     assets.mkdirs();
 
+                    Date date = new Date(System.currentTimeMillis());
                     FileUtils.writeStringToFile(pack, """
                             {
                               "pack": {
-                                "description": "Localize Resources Pack",
-                                "pack_format": 8
+                                "description": "Localize Resources Pack - {date}",
+                                "pack_format": 48
                               }
-                            }""");
+                            }""".replace("{date}",formatter.format(date)));
 
                     JsonObject en_us,zh_cn_json = new JsonObject();
                     String en_us_json = null;
@@ -96,7 +100,7 @@ public class ReloadableResourceManagerMixin {
                     FileUtils.writeStringToFile(zh_cn, zh_cn_json.toString());
                 }
             }
-            Files.move(tmp.toPath(),new File("resourcepacks/"+tmp.getName()).toPath());
+            if(tmp.exists())Files.move(tmp.toPath(),new File("resourcepacks/"+tmp.getName()).toPath());
         } catch (Exception e) {
             Constants.LOG.error("Can't create the resource pack!",e);
         }

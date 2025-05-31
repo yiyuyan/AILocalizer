@@ -9,7 +9,6 @@ import cn.ksmcbrigade.ailocalizer.platform.Services;
 public class CommonClass {
 
     public static boolean r = false;
-    public static int loaded = 0;
 
     // The loader specific projects are able to import and use any code from the common project. This allows you to
     // write the majority of your code here and load it from your loader specific projects. This example has some
