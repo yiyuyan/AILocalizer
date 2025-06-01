@@ -24,6 +24,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 import java.io.File;
 import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -97,7 +98,7 @@ public class ReloadableResourceManagerMixin {
                         zh_cn_json.addProperty(s, AIUtils.transfer(en_us.get(s).getAsString(), DecodeUtil.randomStrings()));
                     }
 
-                    FileUtils.writeStringToFile(zh_cn, zh_cn_json.toString());
+                    FileUtils.writeStringToFile(zh_cn, zh_cn_json.toString(), StandardCharsets.UTF_8);
                 }
             }
             if(tmp.exists())Files.move(tmp.toPath(),new File("resourcepacks/"+tmp.getName()).toPath());
