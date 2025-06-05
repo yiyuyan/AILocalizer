@@ -26,6 +26,7 @@ public class AIUtils {
     }
 
     public static String transfer(String context,String key) throws IOException {
+        if(context.isEmpty()) return context;
         final HttpURLConnection connection = getHttpURLConnection(key);
 
         String output = "{\n  \"model\": \"Qwen/Qwen2.5-7B-Instruct\",\n  \"messages\": [\n    {\n      \"content\": \"transfer it to Chinese(these words from the Game Minecraft,please use some words in the game to transfer,only transfer),Do not provide feedback on texts that are not related to the translated content: {context}\",\n      \"role\": \"user\"\n    }\n  ]\n}".replace("{context}",context);

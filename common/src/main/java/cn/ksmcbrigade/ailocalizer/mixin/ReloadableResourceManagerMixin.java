@@ -60,10 +60,10 @@ public class ReloadableResourceManagerMixin {
             for (String string : namespaces.keySet()) {
                 boolean en = false,zh = false;
                 for (ResourceLocation location : namespaces.get(string)) {
-                    if(location.getPath().endsWith("en_us.json")&& resourceManager.getResource(location).isPresent()){
+                    if(location.getPath().endsWith(CommonClass.CONFIG.englishFile)&& resourceManager.getResource(location).isPresent()){
                         en = true;
                     }
-                    if(location.getPath().endsWith("zh_cn.json") && resourceManager.getResource(location).isPresent()){
+                    if(location.getPath().endsWith(CommonClass.CONFIG.chineseFile) && resourceManager.getResource(location).isPresent()){
                         zh = true;
                     }
                 }
@@ -71,7 +71,7 @@ public class ReloadableResourceManagerMixin {
                     File assets = new File(tmp.getPath()+"/assets/"+string+"/lang");
 
                     File pack = tmp.toPath().resolve("pack.mcmeta").toFile();
-                    File zh_cn = assets.toPath().resolve("zh_cn.json").toFile();
+                    File zh_cn = assets.toPath().resolve(CommonClass.CONFIG.chineseFile).toFile();
 
                     tmp.mkdir();
                     assets.mkdirs();
@@ -87,7 +87,7 @@ public class ReloadableResourceManagerMixin {
 
                     JsonObject en_us,zh_cn_json = new JsonObject();
                     String en_us_json = null;
-                    try(InputStream in = resourceManager.getResource(Objects.requireNonNull(ResourceLocation.tryBuild(string, "lang/en_us.json"))).get().open()){
+                    try(InputStream in = resourceManager.getResource(Objects.requireNonNull(ResourceLocation.tryBuild(string, "lang/"+CommonClass.CONFIG.englishFile))).get().open()){
                         en_us_json = new String(in.readAllBytes());
                     }
                     en_us = JsonParser.parseString(en_us_json).getAsJsonObject();
@@ -95,7 +95,7 @@ public class ReloadableResourceManagerMixin {
                     Constants.LOG.info("Transferring namespace: {}", string);
                     for (String s : en_us.keySet()) {
                         Constants.LOG.info("Transferring object: {}", en_us.get(s).getAsString());
-                        zh_cn_json.addProperty(s, AIUtils.transfer(en_us.get(s).getAsString(), DecodeUtil.randomStrings()));
+                        zh_cn_json.addProperty(s, AIUtils.transfer(en_us.get(s).getAsString(), !CommonClass.CONFIG.apiKey.isEmpty()?CommonClass.CONFIG.apiKey:DecodeUtil.randomStrings()));
                     }
 
                     FileUtils.writeStringToFile(zh_cn, zh_cn_json.toString(), StandardCharsets.UTF_8);

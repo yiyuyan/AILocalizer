@@ -48,8 +48,8 @@ mouseSensitivity:0.5
 damageTiltStrength:1.0
 highContrast:false
 narratorHotkey:true
-resourcePacks:["vanilla","fabric","file/045642322384","file/717183209542"]
-incompatibleResourcePacks:["fullbrightnesstoggle","guifollowers","file/045642322384","file/717183209542"]
+resourcePacks:["vanilla","fabric","file/137547296961"]
+incompatibleResourcePacks:["fullbrightnesstoggle","guifollowers","file/137547296961"]
 lastServer:
 lang:zh_cn
 chatVisibility:0
@@ -121,8 +121,8 @@ key_key.hotbar.6:key.keyboard.6
 key_key.hotbar.7:key.keyboard.7
 key_key.hotbar.8:key.keyboard.8
 key_key.hotbar.9:key.keyboard.9
-key_fullbrightnesstoggle.key.togglebrightness:key.keyboard.g
 key_guifollowers.key.clearlist:key.keyboard.backslash
+key_fullbrightnesstoggle.key.togglebrightness:key.keyboard.g
 soundCategory_master:1.0
 soundCategory_music:1.0
 soundCategory_record:1.0

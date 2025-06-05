@@ -1,6 +1,10 @@
 package cn.ksmcbrigade.ailocalizer;
 
+import cn.ksmcbrigade.ailocalizer.config.Config;
 import cn.ksmcbrigade.ailocalizer.platform.Services;
+
+import java.io.File;
+import java.io.IOException;
 
 // This class is part of the common project meaning it is shared between all supported loaders. Code written here can only
 // import and access the vanilla codebase, libraries used by vanilla, and optionally third party libraries that provide
@@ -9,6 +13,17 @@ import cn.ksmcbrigade.ailocalizer.platform.Services;
 public class CommonClass {
 
     public static boolean r = false;
+    public static Config CONFIG;
+
+    static {
+        new File("config").mkdir();
+        new File("resourcepacks").mkdir();
+        try {
+            CONFIG = new Config(new File("config/" + Constants.MOD_ID + "-config.json"));
+        } catch (IOException | IllegalAccessException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
     // The loader specific projects are able to import and use any code from the common project. This allows you to
     // write the majority of your code here and load it from your loader specific projects. This example has some
