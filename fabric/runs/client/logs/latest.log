@@ -1,6 +1,6 @@
-[19:13:56] [main/INFO] (FabricLoader/GameProvider) Loading Minecraft 1.21 with Fabric Loader 0.15.11
-[19:13:57] [main/INFO] (FabricLoader) Loading 58 mods:
-	- ailocalizer 1.2
+[06:44:13] [main/INFO] (FabricLoader/GameProvider) Loading Minecraft 1.21 with Fabric Loader 0.15.11
+[06:44:13] [main/INFO] (FabricLoader) Loading 58 mods:
+	- ailocalizer 1.3
 	- collective 8.3
 	- configurabledespawntimer 4.3
 	- fabric-api 0.100.1+1.21
@@ -58,78 +58,53 @@
 	- java 21
 	- minecraft 1.21
 	- mixinextras 0.3.5
-[19:14:01] [main/INFO] (FabricLoader/Mixin) SpongePowered MIXIN Subsystem Version=0.8.5 Source=file:/F:/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.13.3+mixin.0.8.5/9527e6b0d2449408958fd1302594dc65ec5ade9c/sponge-mixin-0.13.3+mixin.0.8.5.jar Service=Knot/Fabric Env=CLIENT
-[19:14:01] [main/INFO] (FabricLoader/Mixin) Loaded Fabric development mappings for mixin remapper!
-[19:14:01] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_17
-[19:14:01] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_18
-[19:14:01] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_21
-[19:14:04] [main/INFO] (FabricLoader/MixinExtras|Service) Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.3.5).
-[19:14:06] [Datafixer Bootstrap/INFO] (Minecraft) 226 Datafixer optimizations took 591 milliseconds
-[19:14:18] [Render thread/INFO] (Minecraft) Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
-[19:14:18] [Render thread/INFO] (Collective) Failed to verify authentication
-[19:14:18] [Render thread/INFO] (Minecraft) Setting user: Player159
-[19:14:18] [Render thread/INFO] (AILocalizer) Hello Fabric world!
-[19:14:18] [Render thread/INFO] (AILocalizer) Hello to ailocalizer
-[19:14:18] [Render thread/INFO] (Collective) Loading Collective version 8.3.
-[19:14:18] [Render thread/INFO] (Indigo) [Indigo] Registering Indigo renderer!
-[19:14:20] [Render thread/INFO] (Minecraft) Backend library: LWJGL version 3.3.3-snapshot
-[19:14:20] [Render thread/WARN] (Minecraft) Removed resource pack file/045642322384 from options because it doesn't seem to exist anymore
-[19:14:20] [Render thread/WARN] (Minecraft) Removed resource pack file/717183209542 from options because it doesn't seem to exist anymore
-[19:14:22] [Render thread/INFO] (Minecraft) Reloading ResourceManager: vanilla, fabric, fabric-api, fabric-api-base, fabric-api-lookup-api-v1, fabric-biome-api-v1, fabric-block-api-v1, fabric-block-view-api-v2, fabric-blockrenderlayer-v1, fabric-client-tags-api-v1, fabric-command-api-v1, fabric-command-api-v2, fabric-commands-v0, fabric-content-registries-v0, fabric-convention-tags-v1, fabric-convention-tags-v2, fabric-crash-report-info-v1, fabric-data-attachment-api-v1, fabric-data-generation-api-v1, fabric-dimensions-v1, fabric-entity-events-v1, fabric-events-interaction-v0, fabric-game-rule-api-v1, fabric-gametest-api-v1, fabric-item-api-v1, fabric-item-group-api-v1, fabric-key-binding-api-v1, fabric-keybindings-v0, fabric-lifecycle-events-v1, fabric-loot-api-v2, fabric-message-api-v1, fabric-model-loading-api-v1, fabric-networking-api-v1, fabric-object-builder-api-v1, fabric-particles-v1, fabric-recipe-api-v1, fabric-registry-sync-v0, fabric-renderer-api-v1, fabric-renderer-indigo, fabric-renderer-registries-v1, fabric-rendering-data-attachment-v1, fabric-rendering-fluids-v1, fabric-rendering-v0, fabric-rendering-v1, fabric-resource-conditions-api-v1, fabric-resource-loader-v0, fabric-screen-api-v1, fabric-screen-handler-api-v1, fabric-sound-api-v1, fabric-transfer-api-v1, fabric-transitive-access-wideners-v1, fabricloader, fullbrightnesstoggle, guifollowers
-[19:14:23] [Render thread/INFO] (AILocalizer) Transferring namespace: realms
-[19:14:23] [Worker-Main-7/INFO] (Minecraft) Found unifont_all_no_pua-15.1.05.hex, loading
-[19:14:23] [Render thread/INFO] (AILocalizer) Transferring object: Java Realms subscriptions are moving to the Microsoft Store. Do not let your subscription expire!
+[06:44:18] [main/INFO] (FabricLoader/Mixin) SpongePowered MIXIN Subsystem Version=0.8.5 Source=file:/F:/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.13.3+mixin.0.8.5/9527e6b0d2449408958fd1302594dc65ec5ade9c/sponge-mixin-0.13.3+mixin.0.8.5.jar Service=Knot/Fabric Env=CLIENT
+[06:44:18] [main/INFO] (FabricLoader/Mixin) Loaded Fabric development mappings for mixin remapper!
+[06:44:18] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_17
+[06:44:18] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_21
+[06:44:20] [main/INFO] (FabricLoader/MixinExtras|Service) Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.3.5).
+[06:44:22] [Datafixer Bootstrap/INFO] (Minecraft) 226 Datafixer optimizations took 527 milliseconds
+[06:44:32] [Render thread/INFO] (Minecraft) Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
+[06:44:32] [Render thread/INFO] (Collective) Failed to verify authentication
+[06:44:32] [Render thread/INFO] (Minecraft) Setting user: Player436
+[06:44:32] [Render thread/INFO] (Collective) Loading Collective version 8.3.
+[06:44:32] [Render thread/INFO] (AILocalizer) Hello Fabric world!
+[06:44:32] [Render thread/INFO] (AILocalizer) Hello to ailocalizer
+[06:44:33] [Render thread/INFO] (Indigo) [Indigo] Registering Indigo renderer!
+[06:44:33] [Render thread/INFO] (Minecraft) Backend library: LWJGL version 3.3.3-snapshot
+[06:44:35] [Render thread/INFO] (Minecraft) Reloading ResourceManager: vanilla, fabric, ailocalizer, fabric-api, fabric-api-base, fabric-api-lookup-api-v1, fabric-biome-api-v1, fabric-block-api-v1, fabric-block-view-api-v2, fabric-blockrenderlayer-v1, fabric-client-tags-api-v1, fabric-command-api-v1, fabric-command-api-v2, fabric-commands-v0, fabric-content-registries-v0, fabric-convention-tags-v1, fabric-convention-tags-v2, fabric-crash-report-info-v1, fabric-data-attachment-api-v1, fabric-data-generation-api-v1, fabric-dimensions-v1, fabric-entity-events-v1, fabric-events-interaction-v0, fabric-game-rule-api-v1, fabric-gametest-api-v1, fabric-item-api-v1, fabric-item-group-api-v1, fabric-key-binding-api-v1, fabric-keybindings-v0, fabric-lifecycle-events-v1, fabric-loot-api-v2, fabric-message-api-v1, fabric-model-loading-api-v1, fabric-networking-api-v1, fabric-object-builder-api-v1, fabric-particles-v1, fabric-recipe-api-v1, fabric-registry-sync-v0, fabric-renderer-api-v1, fabric-renderer-indigo, fabric-renderer-registries-v1, fabric-rendering-data-attachment-v1, fabric-rendering-fluids-v1, fabric-rendering-v0, fabric-rendering-v1, fabric-resource-conditions-api-v1, fabric-resource-loader-v0, fabric-screen-api-v1, fabric-screen-handler-api-v1, fabric-sound-api-v1, fabric-transfer-api-v1, fabric-transitive-access-wideners-v1, fabricloader, fullbrightnesstoggle, guifollowers
+[06:44:36] [Render thread/INFO] (AILocalizer) Transferring namespace: realms
+[06:44:36] [Render thread/INFO] (AILocalizer) Transferring object: Java Realms subscriptions are moving to the Microsoft Store. Do not let your subscription expire!
 Transfer now and get 30 days of Realms for free.
 Go to Profile on minecraft.net to transfer your subscription.
-[19:14:23] [Render thread/ERROR] (AILocalizer) Failed to transfer the text: {"code":20015,"message":"The parameter is invalid. Please check again.","data":null}
-[19:14:23] [Render thread/INFO] (AILocalizer) Transferring object: Transfer Now
-[19:14:23] [Worker-Main-3/INFO] (Minecraft) Found unifont_jp_patch-15.1.05.hex, loading
-[19:14:23] [Render thread/INFO] (AILocalizer) Transferring object: Realms are now available in Snapshots starting with Snapshot 23w41a. Every Realms subscription comes with a free Snapshot Realm that is separate from your normal Java Realm!
-[19:14:24] [Render thread/INFO] (AILocalizer) Transferring object: Realms now available in Snapshots
-[19:14:25] [Render thread/INFO] (AILocalizer) Transferring object: Learn More
-[19:14:25] [Render thread/INFO] (AILocalizer) Transferring namespace: fullbrightnesstoggle
-[19:14:25] [Render thread/INFO] (AILocalizer) Transferring object: Toggle Full Brightness
-[19:14:25] [Render thread/INFO] (AILocalizer) Transferring namespace: guifollowers
-[19:14:25] [Render thread/INFO] (AILocalizer) Transferring object: Clear GUI Follower List
-[19:14:26] [Render thread/WARN] (Minecraft) Missing sound for event: minecraft:item.goat_horn.play
-[19:14:26] [Render thread/WARN] (Minecraft) Missing sound for event: minecraft:entity.goat.screaming.horn_break
-[19:14:26] [Render thread/INFO] (Minecraft) OpenAL initialized on device OpenAL Soft on æ‰¬å£°å™¨ (Realtek High Definition Audio)
-[19:14:26] [Render thread/INFO] (Minecraft) Sound engine started
-[19:14:26] [Render thread/INFO] (Minecraft) Created: 1024x512x4 minecraft:textures/atlas/blocks.png-atlas
-[19:14:26] [Render thread/INFO] (Minecraft) Created: 256x256x4 minecraft:textures/atlas/signs.png-atlas
-[19:14:26] [Render thread/INFO] (Minecraft) Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
-[19:14:26] [Render thread/INFO] (Minecraft) Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
-[19:14:26] [Render thread/INFO] (Minecraft) Created: 1024x1024x4 minecraft:textures/atlas/armor_trims.png-atlas
-[19:14:26] [Render thread/INFO] (Minecraft) Created: 128x64x4 minecraft:textures/atlas/decorated_pot.png-atlas
-[19:14:26] [Render thread/INFO] (Minecraft) Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
-[19:14:26] [Render thread/INFO] (Minecraft) Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
-[19:14:26] [Render thread/INFO] (Minecraft) Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
-[19:14:26] [Render thread/INFO] (Minecraft) Created: 512x256x0 minecraft:textures/atlas/particles.png-atlas
-[19:14:27] [Render thread/INFO] (Minecraft) Created: 512x256x0 minecraft:textures/atlas/paintings.png-atlas
-[19:14:27] [Render thread/INFO] (Minecraft) Created: 256x128x0 minecraft:textures/atlas/mob_effects.png-atlas
-[19:14:27] [Render thread/INFO] (Minecraft) Created: 64x64x0 minecraft:textures/atlas/map_decorations.png-atlas
-[19:14:27] [Render thread/INFO] (Minecraft) Created: 1024x512x0 minecraft:textures/atlas/gui.png-atlas
-[19:14:27] [Render thread/WARN] (Minecraft) Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2 in the specified shader program.
-[19:14:58] [Render thread/INFO] (Minecraft) Reloading ResourceManager: vanilla, fabric, fabric-api, fabric-api-base, fabric-api-lookup-api-v1, fabric-biome-api-v1, fabric-block-api-v1, fabric-block-view-api-v2, fabric-blockrenderlayer-v1, fabric-client-tags-api-v1, fabric-command-api-v1, fabric-command-api-v2, fabric-commands-v0, fabric-content-registries-v0, fabric-convention-tags-v1, fabric-convention-tags-v2, fabric-crash-report-info-v1, fabric-data-attachment-api-v1, fabric-data-generation-api-v1, fabric-dimensions-v1, fabric-entity-events-v1, fabric-events-interaction-v0, fabric-game-rule-api-v1, fabric-gametest-api-v1, fabric-item-api-v1, fabric-item-group-api-v1, fabric-key-binding-api-v1, fabric-keybindings-v0, fabric-lifecycle-events-v1, fabric-loot-api-v2, fabric-message-api-v1, fabric-model-loading-api-v1, fabric-networking-api-v1, fabric-object-builder-api-v1, fabric-particles-v1, fabric-recipe-api-v1, fabric-registry-sync-v0, fabric-renderer-api-v1, fabric-renderer-indigo, fabric-renderer-registries-v1, fabric-rendering-data-attachment-v1, fabric-rendering-fluids-v1, fabric-rendering-v0, fabric-rendering-v1, fabric-resource-conditions-api-v1, fabric-resource-loader-v0, fabric-screen-api-v1, fabric-screen-handler-api-v1, fabric-sound-api-v1, fabric-transfer-api-v1, fabric-transitive-access-wideners-v1, fabricloader, fullbrightnesstoggle, guifollowers, file/137547296961
-[19:14:58] [Worker-Main-3/INFO] (Minecraft) Found unifont_all_no_pua-15.1.05.hex, loading
-[19:14:58] [Worker-Main-3/INFO] (Minecraft) Found unifont_jp_patch-15.1.05.hex, loading
-[19:14:59] [Render thread/WARN] (Minecraft) Missing sound for event: minecraft:item.goat_horn.play
-[19:14:59] [Render thread/WARN] (Minecraft) Missing sound for event: minecraft:entity.goat.screaming.horn_break
-[19:14:59] [Render thread/INFO] (Minecraft) OpenAL initialized on device OpenAL Soft on æ‰¬å£°å™¨ (Realtek High Definition Audio)
-[19:14:59] [Render thread/INFO] (Minecraft) Sound engine started
-[19:14:59] [Render thread/INFO] (Minecraft) Created: 1024x512x4 minecraft:textures/atlas/blocks.png-atlas
-[19:14:59] [Render thread/INFO] (Minecraft) Created: 256x256x4 minecraft:textures/atlas/signs.png-atlas
-[19:14:59] [Render thread/INFO] (Minecraft) Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
-[19:14:59] [Render thread/INFO] (Minecraft) Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
-[19:14:59] [Render thread/INFO] (Minecraft) Created: 1024x1024x4 minecraft:textures/atlas/armor_trims.png-atlas
-[19:14:59] [Render thread/INFO] (Minecraft) Created: 128x64x4 minecraft:textures/atlas/decorated_pot.png-atlas
-[19:14:59] [Render thread/INFO] (Minecraft) Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
-[19:14:59] [Render thread/INFO] (Minecraft) Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
-[19:14:59] [Render thread/INFO] (Minecraft) Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
-[19:14:59] [Render thread/INFO] (Minecraft) Created: 512x256x0 minecraft:textures/atlas/particles.png-atlas
-[19:14:59] [Render thread/INFO] (Minecraft) Created: 512x256x0 minecraft:textures/atlas/paintings.png-atlas
-[19:14:59] [Render thread/INFO] (Minecraft) Created: 256x128x0 minecraft:textures/atlas/mob_effects.png-atlas
-[19:14:59] [Render thread/INFO] (Minecraft) Created: 64x64x0 minecraft:textures/atlas/map_decorations.png-atlas
-[19:14:59] [Render thread/INFO] (Minecraft) Created: 1024x512x0 minecraft:textures/atlas/gui.png-atlas
-[19:14:59] [Render thread/WARN] (Minecraft) Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2 in the specified shader program.
-[19:15:14] [Render thread/INFO] (Minecraft) Stopping!
+[06:44:36] [Worker-Main-6/INFO] (Minecraft) Found unifont_all_no_pua-15.1.05.hex, loading
+[06:44:36] [Render thread/ERROR] (AILocalizer) Failed to transfer the text: {"code":20015,"message":"The parameter is invalid. Please check again.","data":null}
+[06:44:36] [Render thread/INFO] (AILocalizer) Transferring object: Transfer Now
+[06:44:36] [Worker-Main-6/INFO] (Minecraft) Found unifont_jp_patch-15.1.05.hex, loading
+[06:44:36] [Render thread/INFO] (AILocalizer) Transferring object: Realms are now available in Snapshots starting with Snapshot 23w41a. Every Realms subscription comes with a free Snapshot Realm that is separate from your normal Java Realm!
+[06:44:38] [Render thread/INFO] (AILocalizer) Transferring object: Realms now available in Snapshots
+[06:44:38] [Render thread/INFO] (AILocalizer) Transferring object: Learn More
+[06:44:39] [Render thread/INFO] (AILocalizer) Transferring namespace: fullbrightnesstoggle
+[06:44:39] [Render thread/INFO] (AILocalizer) Transferring object: Toggle Full Brightness
+[06:44:39] [Render thread/INFO] (AILocalizer) Transferring namespace: guifollowers
+[06:44:39] [Render thread/INFO] (AILocalizer) Transferring object: Clear GUI Follower List
+[06:44:39] [Render thread/WARN] (Minecraft) Missing sound for event: minecraft:item.goat_horn.play
+[06:44:39] [Render thread/WARN] (Minecraft) Missing sound for event: minecraft:entity.goat.screaming.horn_break
+[06:44:40] [Render thread/INFO] (Minecraft) OpenAL initialized on device OpenAL Soft on ÑïÉùÆ÷ (Realtek High Definition Audio)
+[06:44:40] [Render thread/INFO] (Minecraft) Sound engine started
+[06:44:40] [Render thread/INFO] (Minecraft) Created: 1024x512x4 minecraft:textures/atlas/blocks.png-atlas
+[06:44:40] [Render thread/INFO] (Minecraft) Created: 256x256x4 minecraft:textures/atlas/signs.png-atlas
+[06:44:40] [Render thread/INFO] (Minecraft) Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
+[06:44:40] [Render thread/INFO] (Minecraft) Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
+[06:44:40] [Render thread/INFO] (Minecraft) Created: 1024x1024x4 minecraft:textures/atlas/armor_trims.png-atlas
+[06:44:40] [Render thread/INFO] (Minecraft) Created: 128x64x4 minecraft:textures/atlas/decorated_pot.png-atlas
+[06:44:40] [Render thread/INFO] (Minecraft) Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
+[06:44:40] [Render thread/INFO] (Minecraft) Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
+[06:44:40] [Render thread/INFO] (Minecraft) Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
+[06:44:40] [Render thread/INFO] (Minecraft) Created: 512x256x0 minecraft:textures/atlas/particles.png-atlas
+[06:44:40] [Render thread/INFO] (Minecraft) Created: 512x256x0 minecraft:textures/atlas/paintings.png-atlas
+[06:44:40] [Render thread/INFO] (Minecraft) Created: 256x128x0 minecraft:textures/atlas/mob_effects.png-atlas
+[06:44:40] [Render thread/INFO] (Minecraft) Created: 64x64x0 minecraft:textures/atlas/map_decorations.png-atlas
+[06:44:40] [Render thread/INFO] (Minecraft) Created: 1024x512x0 minecraft:textures/atlas/gui.png-atlas
+[06:44:40] [Render thread/WARN] (Minecraft) Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2 in the specified shader program.
+[06:44:47] [Render thread/INFO] (Minecraft) Stopping!

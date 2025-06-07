@@ -48,8 +48,8 @@ mouseSensitivity:0.5
 damageTiltStrength:1.0
 highContrast:false
 narratorHotkey:true
-resourcePacks:["vanilla","fabric","file/137547296961"]
-incompatibleResourcePacks:["fullbrightnesstoggle","guifollowers","file/137547296961"]
+resourcePacks:["vanilla","fabric"]
+incompatibleResourcePacks:["fullbrightnesstoggle","guifollowers"]
 lastServer:
 lang:zh_cn
 chatVisibility:0

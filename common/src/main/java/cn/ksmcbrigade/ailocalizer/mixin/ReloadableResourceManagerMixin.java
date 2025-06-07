@@ -7,6 +7,8 @@ import cn.ksmcbrigade.ailocalizer.utils.DecodeUtil;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.components.toasts.SystemToast;
+import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.PackResources;
 import net.minecraft.server.packs.PackType;
@@ -35,9 +37,29 @@ import java.util.concurrent.Executor;
 public class ReloadableResourceManagerMixin {
     @Inject(method = "createReload",at = @At("TAIL"))
     public void init(Executor pBackgroundExecutor, Executor pGameExecutor, CompletableFuture<Unit> pWaitingFor, List<PackResources> pResourcePacks, CallbackInfoReturnable<ReloadInstance> cir) throws Exception {
-        try {
             if(CommonClass.r) return;
             CommonClass.r = true;
+            if(CommonClass.CONFIG.delay()){
+                Thread thread = new Thread(this::aILocalizer$run);
+                thread.start();
+            }
+            else{
+                aILocalizer$run();
+            }
+
+        /*MC.reloadResourcePacks();
+        for (Pack pack : MC.getResourcePackRepository().getAvailablePacks()) {
+            if(pack.getDescription().getString().contains("Localize Resources Pack")){
+                ArrayList<Pack> packs = new ArrayList<>();
+                packs.addAll(MC.getResourcePackRepository().getSelectedPacks());
+                if(!packs.contains(pack)) packs.add(pack);
+            }
+        }
+        MC.reloadResourcePacks();*/
+    }
+
+    private void aILocalizer$run(){
+        try {
             Minecraft MC = Minecraft.getInstance();
             ResourceManager resourceManager = MC.getResourceManager();
             Map<String,ArrayList<ResourceLocation>> namespaces = new HashMap();
@@ -102,18 +124,10 @@ public class ReloadableResourceManagerMixin {
                 }
             }
             if(tmp.exists())Files.move(tmp.toPath(),new File("resourcepacks/"+tmp.getName()).toPath());
-        } catch (Exception e) {
+            MC.getToasts().addToast(new SystemToast(SystemToast.SystemToastId.WORLD_BACKUP, Component.literal(Constants.MOD_NAME),Component.translatable("toast.al.notice")));
+        }
+        catch (Exception e){
             Constants.LOG.error("Can't create the resource pack!",e);
         }
-
-        /*MC.reloadResourcePacks();
-        for (Pack pack : MC.getResourcePackRepository().getAvailablePacks()) {
-            if(pack.getDescription().getString().contains("Localize Resources Pack")){
-                ArrayList<Pack> packs = new ArrayList<>();
-                packs.addAll(MC.getResourcePackRepository().getSelectedPacks());
-                if(!packs.contains(pack)) packs.add(pack);
-            }
-        }
-        MC.reloadResourcePacks();*/
     }
 }

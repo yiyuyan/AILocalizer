@@ -14,6 +14,7 @@ public class Config {
     public String apiKey = "";
     public String englishFile = "en_us.json";
     public String chineseFile = "zh_cn.json";
+    public String delay = "true";
 
     public Config(File file) throws IOException, IllegalAccessException {
         this.file = file;
@@ -40,5 +41,9 @@ public class Config {
                 declaredField.set(this,object.get(declaredField.getName()).getAsString());
             }
         }
+    }
+
+    public boolean delay(){
+        return Boolean.parseBoolean(delay);
     }
 }
