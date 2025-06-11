@@ -45,6 +45,7 @@ public class AIUtils {
 
         try {
             connection.connect();
+            reconnectTimes = 0;
         } catch (SocketTimeoutException ex){
             Constants.LOG.info("Reconnecting...");
             reconnectTimes++;
