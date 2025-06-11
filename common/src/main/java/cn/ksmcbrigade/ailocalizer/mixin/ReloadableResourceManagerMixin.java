@@ -37,15 +37,15 @@ import java.util.concurrent.Executor;
 public class ReloadableResourceManagerMixin {
     @Inject(method = "createReload",at = @At("TAIL"))
     public void init(Executor pBackgroundExecutor, Executor pGameExecutor, CompletableFuture<Unit> pWaitingFor, List<PackResources> pResourcePacks, CallbackInfoReturnable<ReloadInstance> cir) throws Exception {
-            if(CommonClass.r) return;
-            CommonClass.r = true;
-            if(CommonClass.CONFIG.delay()){
-                Thread thread = new Thread(this::aILocalizer$run);
-                thread.start();
-            }
-            else{
-                aILocalizer$run();
-            }
+        if(CommonClass.r) return;
+        CommonClass.r = true;
+        if(CommonClass.CONFIG.delay()){
+            Thread thread = new Thread(this::aILocalizer$run);
+            thread.start();
+        }
+        else{
+            aILocalizer$run();
+        }
 
         /*MC.reloadResourcePacks();
         for (Pack pack : MC.getResourcePackRepository().getAvailablePacks()) {
@@ -113,11 +113,22 @@ public class ReloadableResourceManagerMixin {
                         en_us_json = new String(in.readAllBytes());
                     }
                     en_us = JsonParser.parseString(en_us_json).getAsJsonObject();
+                    Set<String> transferred = new LinkedHashSet<>();
 
                     Constants.LOG.info("Transferring namespace: {}", string);
                     for (String s : en_us.keySet()) {
-                        Constants.LOG.info("Transferring object: {}", en_us.get(s).getAsString());
-                        zh_cn_json.addProperty(s, AIUtils.transfer(en_us.get(s).getAsString(), !CommonClass.CONFIG.apiKey.isEmpty()?CommonClass.CONFIG.apiKey:DecodeUtil.randomStrings()));
+                        try {
+                            String object = en_us.get(s).getAsString();
+                            if(!transferred.add(object)){
+                                Constants.LOG.warn("Has already transferred the object: {}",object);
+                                continue;
+                            }
+                            Constants.LOG.info("Transferring object: {}", object);
+                            String result = AIUtils.transfer(object, !CommonClass.CONFIG.apiKey.isEmpty()?CommonClass.CONFIG.apiKey:DecodeUtil.randomStrings());
+                            zh_cn_json.addProperty(s, result);
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
                     }
 
                     FileUtils.writeStringToFile(zh_cn, zh_cn_json.toString(), StandardCharsets.UTF_8);
